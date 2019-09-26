@@ -124,10 +124,20 @@ export const Button = styled.button`
   justify-content: center;
   align-items: center;
   margin: 0px 20px;
-  border: 3px solid white;
+  border: ${props => (props.isShowSearch ? null : "3px solid white")};
   border-radius: 5px;
   font-family: "Mija";
   font-size: 22px;
   font-weight: bold;
   color: white;
+  background-color: ${props =>
+    props.isShowSearch ? "rgba(0, 0, 0, 0.3)" : null};
+
+  &::before {
+    content: "🔍 Topics";
+
+    @media only screen and (max-width: 900px) {
+      content: "🔍 Menu";
+    }
+  }
 `;

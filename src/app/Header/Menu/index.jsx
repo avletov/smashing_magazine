@@ -15,7 +15,7 @@ import {
 
 export class Menu extends Component {
   render() {
-    const { menuData } = this.props;
+    const { menuData, handlerButton, isShowSearch } = this.props;
 
     return (
       <ContainerMenu>
@@ -41,7 +41,7 @@ export class Menu extends Component {
             })}
           </List>
         </Nav>
-        <Button>🔍 Topics</Button>
+        <Button onClick={handlerButton} isShowSearch={isShowSearch}></Button>
       </ContainerMenu>
     );
   }

@@ -36,7 +36,7 @@ export const menuData = [
   }
 ];
 
-export const topicListData = [
+export const topicsData = [
   { id: 1, name: "Accembility", url: "#" },
   { id: 2, name: "Android", url: "#" },
   { id: 3, name: "Animation", url: "#" },
