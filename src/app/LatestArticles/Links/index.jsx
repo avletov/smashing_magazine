@@ -8,8 +8,10 @@ import {
   Name,
   Wrote,
   Content,
+  Comments,
   HashtagsList,
   Hashtag,
+  HashtagId,
   HashtagLink
 } from "./styles";
 
@@ -26,9 +28,12 @@ export class Links extends Component {
         authorLink,
         photo,
         content,
+        comments,
         link,
         hashtags
       } = article;
+
+      const { number, href } = comments;
 
       return (
         <ArticleLink isRedVersion={isRedVersion} id={id} key={id} href={link}>
@@ -36,17 +41,21 @@ export class Links extends Component {
             <PhotoWrapper>
               <Photo photo={photo}></Photo>
             </PhotoWrapper>
-            <Name>{author}</Name>
-            <Wrote>wrote</Wrote>
+            <Name isRedVersion={isRedVersion}>{author}</Name>
+            <Wrote isRedVersion={isRedVersion}>wrote</Wrote>
           </Author>
-          <Content>{content}</Content>
+          <Content isRedVersion={isRedVersion}>{content}</Content>
+          <Comments isRedVersion={isRedVersion}>{number} Comments</Comments>
           <HashtagsList>
             {hashtags.map(hashtag => {
               const { name, id, link } = hashtag;
 
               return (
                 <Hashtag key={id}>
-                  <HashtagLink href={link}>{name}</HashtagLink>
+                  <HashtagLink isRedVersion={isRedVersion} href={link}>
+                    {name}
+                    <HashtagId>{id}</HashtagId>
+                  </HashtagLink>
                 </Hashtag>
               );
             })}

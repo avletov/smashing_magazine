@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import { Header } from "./Header";
 import { LatestArticles } from "./LatestArticles";
+import { LatestPosts } from "./LatestPosts";
 
 export default class App extends Component {
   render() {
@@ -9,6 +10,7 @@ export default class App extends Component {
       <React.Fragment>
         <Header />
         <LatestArticles />
+        <LatestPosts />
       </React.Fragment>
     );
   }

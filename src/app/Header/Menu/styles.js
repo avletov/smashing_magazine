@@ -12,8 +12,13 @@ export const ContainerMenu = styled.div`
   }
 
   @media only screen and (max-width: 900px) {
-    height: 100px;
+    height: 120px;
     justify-content: space-between;
+  }
+
+  @media only screen and (max-width: 800px) {
+    flex-wrap: wrap;
+    height: auto;
   }
 `;
 
@@ -25,17 +30,60 @@ export const Nav = styled.nav`
     width: 70%;
   }
 
+  @media only screen and (max-width: 1000px) {
+    width: 65%;
+  }
+
   @media only screen and (max-width: 900px) {
-    display: none;
+    width: 60%;
+  }
+
+  @media only screen and (max-width: 800px) {
+    width: 100%;
+    padding: 5%;
+    box-sizing: border-box;
+    order: 3;
   }
 `;
 
 export const List = styled.ul`
   display: flex;
+
+  @media only screen and (max-width: 800px) {
+    flex-wrap: wrap;
+    width: 100%;
+  }
 `;
 
 export const Item = styled.li`
   width: 20%;
+
+  @media only screen and (max-width: 800px) {
+    width: 50%;
+    height: 50px;
+    float: left;
+    text-align: left;
+
+    &:nth-child(1) {
+      background-color: rgb(188, 52, 40);
+    }
+
+    &:nth-child(2) {
+      background-color: rgb(215, 55, 42);
+    }
+
+    &:nth-child(3) {
+      background-color: rgb(193, 49, 37);
+    }
+
+    &:nth-child(4) {
+      background-color: rgb(188, 52, 40);
+    }
+
+    &:nth-child(5) {
+      background-color: rgb(215, 55, 42);
+    }
+  }
 `;
 
 export const Link = styled.a`
@@ -45,6 +93,12 @@ export const Link = styled.a`
   align-items: center;
   padding: 10px 5px;
   color: white;
+
+  @media only screen and (max-width: 800px) {
+    height: 100%;
+    padding: 0px;
+    justify-content: center;
+  }
 
   &::before {
     content: "";
@@ -56,6 +110,10 @@ export const Link = styled.a`
     height: 1px;
     box-shadow: 5px 5px 3px black;
     transition: box-shadow 0.3s ease-in-out;
+
+    @media only screen and (max-width: 800px) {
+      display: none;
+    }
   }
 
   &:hover::before {
@@ -83,6 +141,10 @@ export const Icon = styled.svg`
   transform-origin: 0% 100%;
   transform: rotate(-10deg);
   transition: transform 0.3s ease-in-out;
+
+  @media only screen and (max-width: 800px) {
+    display: none;
+  }
 `;
 
 export const ItemTitle = styled.span`
@@ -112,9 +174,9 @@ export const ItemSubtitle = styled.span`
 `;
 
 export const Logo = styled.svg`
-  width: 59px;
-  height: 79px;
-  margin: 0px 20px;
+  width: 60px;
+  height: 80px;
+  margin: 20px;
 `;
 
 export const Button = styled.button`

@@ -1,8 +1,14 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
+  display: flex;
+  flex-wrap: wrap;
   position: relative;
   width: 100%;
+
+  @media only screen and (max-width: 800px) {
+    flex-direction: column;
+  }
 `;
 
 export const Title = styled.div`
@@ -14,6 +20,7 @@ export const Title = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 10;
 
   &::before {
     content: "";
@@ -36,4 +43,12 @@ export const TitleText = styled.span`
   font-size: 30px;
   font-weight: bold;
   white-space: nowrap;
+  background-color: ${({ isRedVersion }) =>
+    isRedVersion ? "white" : "#c7372a"};
+  color: ${({ isRedVersion }) => (isRedVersion ? "rgb(51, 51, 51)" : "white")};
+  transition: all 0.3s ease-in-out;
+
+  @media only screen and (max-width: 500px) {
+    font-size: 26px;
+  }
 `;

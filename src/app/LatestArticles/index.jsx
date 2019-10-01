@@ -19,11 +19,14 @@ export class LatestArticles extends Component {
 
     return (
       <Container>
-        <Title>
-          <TitleText>Don’t Miss These Latest</TitleText>
-          <TitleText>Articles</TitleText>
+        <Title isRedVersion={isRedVersion}>
+          <TitleText isRedVersion={isRedVersion}>
+            Don’t Miss These Latest
+          </TitleText>
+          <TitleText isRedVersion={isRedVersion}>Articles</TitleText>
         </Title>
         <SettingsColor
+          isRedVersion={isRedVersion}
           handlerColorSettings={this.handlerColorSettings}
         ></SettingsColor>
         <Links isRedVersion={isRedVersion}></Links>

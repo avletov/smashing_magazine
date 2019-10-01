@@ -4,14 +4,20 @@ import { Container, ImageWrapper, Image, Spinner, Button } from "./styles";
 
 export class SettingsColor extends Component {
   render() {
+    const { isRedVersion, handlerColorSettings } = this.props;
+
     return (
-      <Container>
+      <Container onClick={handlerColorSettings}>
         <ImageWrapper>
           <Image>
-            <Spinner></Spinner>
+            <Spinner isRedVersion={isRedVersion}>
+              <use xlinkHref="./img/sprite.svg#SETTINGS_IMAGE"></use>
+            </Spinner>
           </Image>
         </ImageWrapper>
-        <Button></Button>
+        <Button isRedVersion={isRedVersion}>
+          {isRedVersion ? "Seriously, red?" : "Bring red back!"}
+        </Button>
       </Container>
     );
   }

@@ -75,12 +75,16 @@ export const topicsData = [
 export const latestArticlesData = [
   {
     id: "01",
+    link: "#",
     author: "Anselm Hanneman",
     authorLink: "#",
-    photo: "url(./assets/img/anselm-hanneman.jpg)",
+    photo: "url(./img/anselm-hanneman.jpg)",
     content:
       "Montly Web Development Update 9/2019: Embracing Basic And Why Simple Is Hard",
-    link: "#",
+    comments: {
+      number: 3,
+      href: "#"
+    },
     hashtags: [
       {
         name: "Web Development Reading List",
@@ -90,11 +94,15 @@ export const latestArticlesData = [
   },
   {
     id: "02",
+    link: "#",
     author: "Laurie Barth",
     authorLink: "#",
-    photo: "url(./assets/img/laurie-barth.jpg)",
+    photo: "url(./img/laurie-barth.jpg)",
     content: "A Re-Introduction To Destructuring Assignment",
-    link: "#",
+    comments: {
+      number: 2,
+      link: "#"
+    },
     hashtags: [
       {
         name: "JavaScript",
@@ -105,11 +113,15 @@ export const latestArticlesData = [
   },
   {
     id: "03",
+    link: "#",
     author: "Burke Holland",
     authorLink: "#",
-    photo: "url(./assets/img/burke-holland.jpg)",
+    photo: "url(./img/burke-holland.jpg)",
     content: "Moving You Javascript Development To Bash on Windows",
-    link: "#",
+    comments: {
+      number: 3,
+      link: "#"
+    },
     hashtags: [
       {
         name: "JavaScript",
@@ -120,11 +132,15 @@ export const latestArticlesData = [
   },
   {
     id: "04",
+    link: "#",
     author: "Nick Babich",
     authorLink: "#",
-    photo: "url(./assets/img/nick-babich.jpg)",
+    photo: "url(./img/nick-babich.jpg)",
     content: "Webflow: The Web Development Platform On The Future",
-    link: "#",
+    comments: {
+      number: 5,
+      link: "#"
+    },
     hashtags: [
       {
         name: "Tools",
@@ -137,5 +153,87 @@ export const latestArticlesData = [
         link: "#"
       }
     ]
+  }
+];
+
+export const latestPostData = [
+  {
+    daysAgo: 4,
+    title: "Designing Complex Responsive Tables In WordPress",
+    author: {
+      name: "Suzanne Scacca",
+      linkToAuthor: "#"
+    },
+    content:
+      "We don’t have any excuse for creating poor experiences today. Here’s what you need to know about designing complex tables for your mobile visitors in WordPress.",
+    link: "#"
+  },
+  {
+    daysAgo: 5,
+    title: "Is There Such A Thing As Too Much Social Proof?",
+    author: {
+      name: "Suzanne Scacca",
+      linkToAuthor: "#"
+    },
+    content:
+      "Social proof comes in a variety of forms. This guide will show you how to build social proof into the mobile experience the right way.",
+    link: "#"
+  },
+  {
+    daysAgo: 9,
+    title: "How AI Is Helping Solve Climate Change",
+    author: {
+      name: "Nicholas Farmen",
+      linkToAuthor: "#"
+    },
+    content:
+      "Climate change is a complex problem that cannot be solved with a swift flick of a biodegradable, magic wand. But certain environmental issues can be solved with the right code. That’s where you come in.",
+    link: "#"
+  },
+  {
+    daysAgo: 10,
+    title:
+      "My Design Process Of The Cover Design For Smashing Magazine Print Issue #1",
+    author: {
+      name: "Veerle Pieters",
+      linkToAuthor: "#"
+    },
+    content:
+      "We’ve just released Smashing Magazine Print, with the very first pilot issue dedicated to ethics and privacy. In this post, Veerle, the illustrator of the issue, sheds some light into her design process and decisions made along the way.",
+    link: "#"
+  },
+  {
+    daysAgo: 11,
+    title: "A Pain-Free Workflow For Issue Reporting And Resolution",
+    author: {
+      name: "Suzanne Scacca",
+      linkToAuthor: "#"
+    },
+    content:
+      "Let’s face it: it’s never easy to deal with client feedback. Requests may be vague (“the form is broken”), too subjective (“the page doesn’t load fast enough”), or difficult to assess without seeing it yourself (“the page still isn’t updated”). You …",
+    link: "#"
+  },
+  {
+    daysAgo: 15,
+    title:
+      "Monthly Web Development Update 9/2019: Embracing Basic And Why Simple Is Hard",
+    author: {
+      name: "Anselm Hannemann",
+      linkToAuthor: "#"
+    },
+    content:
+      "What happened in the web dev world in the past four weeks? In his final monthly reading list, Anselm summarized everything you need to know to stay on top of things.",
+    link: "#"
+  },
+  {
+    daysAgo: 16,
+    title: "A Re-Introduction To Destructuring Assignment",
+    author: {
+      name: "Laurie Barth",
+      linkToAuthor: "#"
+    },
+    content:
+      "Sick of chaining lots of keys together with dots to access nested values in objects? Frustrated that arr[0] isn’t a very descriptive name? Destructuring assignment has incredible value when accessing values in arrays and objects. Read on to learn a …",
+    link: "#"
   }
 ];
