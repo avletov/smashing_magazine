@@ -12,10 +12,18 @@ import {
   Author,
   AuthorLink,
   Content,
-  InsertBlock
+  InsertBlock,
+  LoadMoreCont,
+  LoadMore,
+  VerticalHeader,
+  VerticalHeaderText
 } from "./styles";
 
-import { latestPostData } from "../../mock/data";
+import {
+  latestPostData,
+  smashingMembersData1,
+  smashingMembersData2
+} from "../../mock/data";
 
 export class LatestPosts extends Component {
   render() {
@@ -39,10 +47,19 @@ export class LatestPosts extends Component {
             </PostWrapper>
           );
         })}
-        <InsertBlock>
+        <InsertBlock order={4}>
           <Supporters></Supporters>
-          <SmashingMembers></SmashingMembers>
+          <SmashingMembers data={smashingMembersData1}></SmashingMembers>
         </InsertBlock>
+        <SmashingMembers
+          isSecond={true}
+          order={9}
+          data={smashingMembersData2}
+        ></SmashingMembers>
+        <LoadMoreCont>
+          <LoadMore href="#">SEE ALL LATEST ARTICLES →</LoadMore>
+        </LoadMoreCont>
+        <VerticalHeader type={"latest"}>LATEST POSTS</VerticalHeader>
       </Container>
     );
   }

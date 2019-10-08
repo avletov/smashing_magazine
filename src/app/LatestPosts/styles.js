@@ -1,17 +1,26 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
+  position: relative;
   display: flex;
   padding: 30px;
   flex-wrap: wrap;
   background-color: rgb(246, 243, 242);
-  overflow: hidden;
+  box-sizing: border-box;
 `;
 
 export const PostWrapper = styled.div`
   position: relative;
   width: 33.33%;
   order: ${({ order }) => order};
+
+  @media only screen and (max-width: 1100px) {
+    width: 50%;
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 export const Post = styled.a`
@@ -24,6 +33,10 @@ export const Post = styled.a`
   z-index: 10;
   transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
 
+  @media only screen and (max-width: 1100px) {
+    padding: 30px 0px 90px 10px;
+  }
+
   &:hover {
     background-color: white;
     z-index: 20;
@@ -32,7 +45,7 @@ export const Post = styled.a`
     &::before {
       transition: all 0.5s ease-in-out;
       background-color: white;
-      box-shadow: 0px 0px 100px grey;
+      box-shadow: 0px 0px 25px rgb(50, 50, 50, 0.5);
       z-index: -10;
     }
 
@@ -109,8 +122,68 @@ export const Content = styled.p`
 `;
 
 export const InsertBlock = styled.div`
-  order: 4;
+  order: ${({ order }) => order};
   width: 100%;
   padding: 50px 0px;
   display: flex;
+
+  @media only screen and (max-width: 1100px) {
+    width: 50%;
+  }
+
+  @media only screen and (max-width: 900px) {
+    width: 100%;
+  }
+`;
+
+export const LoadMoreCont = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  order: 10;
+`;
+
+export const LoadMore = styled.a`
+  padding: 10px 0px;
+  border-bottom: 5px solid #d33a2c;
+`;
+
+export const VerticalHeader = styled.h4`
+  position: absolute;
+  top: ${({ type }) => {
+    switch (type) {
+      case "latest":
+        return "125px";
+      case "community":
+        return "150px";
+      default:
+        return "0px";
+    }
+  }};
+  left: ${({ type }) => {
+    switch (type) {
+      case "latest":
+        return "-30px";
+      case "community":
+        return "-50px";
+      default:
+        return "0px";
+    }
+  }};
+  margin: 0px;
+  transform: rotate(90deg);
+  font-family: "Elena";
+  font-weight: bold;
+  font-size: 15px;
+
+  &::before {
+    position: absolute;
+    top: 45%;
+    left: -170px;
+    content: "";
+    width: 150px;
+    height: 1px;
+    border: 0.5px solid black;
+    box-sizing: border-box;
+  }
 `;

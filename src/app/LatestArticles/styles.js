@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
+  position: relative;
   display: flex;
   flex-wrap: wrap;
-  position: relative;
   width: 100%;
+  z-index: 0;
 
   @media only screen and (max-width: 800px) {
     flex-direction: column;
@@ -12,8 +13,8 @@ export const Container = styled.section`
 `;
 
 export const Title = styled.div`
-  display: flex;
   position: absolute;
+  display: flex;
   top: 50px;
   left: 50%;
   transform: translateX(-50%);
@@ -22,7 +23,7 @@ export const Title = styled.div`
   justify-content: center;
   z-index: 10;
 
-  &::before {
+  &::after {
     content: "";
     display: block;
     width: 300px;

@@ -1,19 +1,32 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  position: relative;
   display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
   width: 333px;
   height: 240px;
-  margin: 30px 30px 30px 60px;
+  margin: 30px;
   padding: 18px;
   padding-bottom: 36px;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: center;
   border-radius: 10px;
   font-family: "Elena";
-  align-items: center;
   background: linear-gradient(-30deg, #794cffe5, #794cffe5 45%, #794cff 45%)
     #fff;
+
+  @media only screen and (max-width: 1100px) {
+    display: none;
+  }
+
+  &::before {
+    content: "Our friends and supporters ↓";
+    position: absolute;
+    top: -30px;
+    font-family: "Elena";
+    font-size: 14px;
+  }
 `;
 
 export const Logo = styled.img`

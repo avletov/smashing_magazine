@@ -2,12 +2,23 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  width: 100%;
+  order: ${({ order }) => (order ? order : null)};
+  width: ${({ isSecond }) => (isSecond ? "60%" : "100%")};
   flex-direction: column;
-  padding: 20px 20px 60px 20px;
+  margin: ${({ isSecond }) => (isSecond ? "30px 0px 30px 30px" : null)};
+  padding: 20px 20px 40px 20px;
   align-items: center;
   border-radius: 10px;
   background-color: rgb(211, 58, 44);
+
+  @media only screen and (max-width: 1100px) {
+    width: 100%;
+    margin: ${({ isSecond }) => (isSecond ? " 30px 0px" : null)};
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 export const Illustration = styled.img`
@@ -15,8 +26,9 @@ export const Illustration = styled.img`
   height: 243px;
 `;
 
-export const Membership = styled.a`
-  //max-width: 460px;
+export const Title = styled.a`
+  display: inline;
+  max-width: 475px;
   text-align: center;
   font-family: "Mija";
   font-weight: bold;
@@ -24,18 +36,19 @@ export const Membership = styled.a`
   color: #fff;
   text-shadow: 3px 0 #d33a2c, 2px 0 #d33a2c, 1px 0 #d33a2c, -1px 0 #d33a2c,
     -2px 0 #d33a2c, -3px 0 #d33a2c;
-  background-image: linear-gradient(#e58980, #e58980);
-  background-size: 100% 3px;
-  background-position: center bottom 25%;
-  background-repeat: no-repeat;
+  text-decoration: underline;
+  text-decoration-color: #e58980;
+  text-decoration-skip-ink: none;
+}
 `;
 
 export const Text = styled.p`
-  max-width: 460px;
-  margin: 20px 0px;
+  max-width: 475px;
+  margin: 25px 0px;
   text-align: center;
   font-family: "Elena";
-  font-size: 20px;
+  font-size: 21px;
+  line-height: 35px;
   color: white;
 `;
 
@@ -51,8 +64,16 @@ export const Button = styled.a`
 `;
 
 export const SignIn = styled.span`
-  padding: 10px;
+  margin: 25px 0px;
   font-family: "Elena";
-  font-size: 14px;
+  font-size: 16px;
+  color: white;
+`;
+
+export const Link = styled.a`
+  text-shadow: 3px 0 #d33a2c, 2px 0 #d33a2c, 1px 0 #d33a2c, -1px 0 #d33a2c,
+    -2px 0 #d33a2c, -3px 0 #d33a2c;
+  background-image: linear-gradient(transparent 16px, #e58980 3px);
+  background-size: 100% 19px;
   color: white;
 `;

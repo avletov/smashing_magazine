@@ -1,3 +1,5 @@
+import { Background } from "../app/Smashing/styles";
+
 export const menuData = [
   {
     id: "1",
@@ -237,3 +239,140 @@ export const latestPostData = [
     link: "#"
   }
 ];
+
+export const smashingMembersData1 = {
+  img:
+    "https://d33wubrfki0l68.cloudfront.net/aea2faf51cc69a1e10bb434aa92f7c3821f16787/e4922/images/smashing-cat/singing-barista.svg",
+  title: {
+    text: "1, 620 smashing members",
+    href: "#"
+  },
+  text:
+    "A friendly community that keeps this website alive. With books, webinars, discounts and networking — for just 1 coffee a month. Join the family.",
+  button: {
+    inner: "Explore features →",
+    href: "#"
+  }
+};
+
+export const smashingMembersData2 = {
+  img:
+    "https://d33wubrfki0l68.cloudfront.net/72280e1450d4ecfc45ef96ea00b27b4bf4ef5d06/eb759/images/smashing-cat/cat-smashing-tv-2.svg",
+  title: {
+    text: "New on Smashing TV",
+    href: "#"
+  },
+  text:
+    "A channel where seasoned developers show how they design, build, work and play. Coming up next: Technical SEO For Single Page Apps with Martin Splitt (Oct 8).",
+  button: {
+    inner: "See all upcoming episodes →",
+    href: "#"
+  }
+};
+
+export const smashingData = {
+  print: {
+    subtitle: "COMING UP NEXT • JULY 24–26",
+    title: "Smashing Print #1: Ethics & Privacy",
+    text:
+      "Meet our new printed magazine, exploring topics that will make us all think, and will remain useful as time passes by. Friendly, practicaland approachable. Shipping now.",
+    button: {
+      inner: "Download a free PDF preview →",
+      href: "#"
+    },
+    background:
+      "https://d33wubrfki0l68.cloudfront.net/148069bc1849f0c7b2304c945073dbdfdb6341f0/b12bb/images/printed-mag/printmag-homepage-opt.svg"
+  },
+
+  feature: {
+    subtitle: "FEATURED SMASHING BOOK",
+    title: "Design Systems",
+    text:
+      "Meet Design Systems, a recent Smashing book in which Alla Kholmatova explores how to set up an effective design system to create great digital products. With common traps, gotchas and lessons learned.",
+    button: {
+      inner: "Table of Contents ↬",
+      href: "#"
+    },
+    background:
+      "https://res.cloudinary.com/indysigner/image/upload/v1542959380/shop/design-systems-hardcover-book.png"
+  }
+};
+
+export const communityLinksData = {
+  personOfTheWeek: {
+    name: "Marcos Cáceres",
+    photo:
+      "https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/2a10db12-9017-48f9-b8c5-20f4b8e67627/marcos-caceres-opt.png",
+    twitter: "https://twitter.com/marcosc",
+    twitterName: "@marcosc",
+    describe:
+      "is a Staff Engineer at Mozilla. He has been working on web standards for over a decade and currently co-chairs the W3C’s Web Platform Incubator Community Group (WICG) and the Web Applications Working Group. Having developed for the web since 1996, Marcos is passionate about empowering web developers to build next-generation experiences and keeping the web safe, free, and open for all. Thank you for helping the web advance, dear Marcos!"
+  },
+  other: [
+    {
+      author: {
+        name: "Sarah Drasner",
+        twitter: "https://twitter.com/sarah_edo"
+      },
+      photo:
+        "https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/24f3a562-ce19-4bac-9585-5275dbcf26f5/sarah-drasner-opt.png",
+      date: "OCTOBER 4, 2019",
+      title: "Inspiring Code Demos",
+      content:
+        "Sarah Drasner asked her followers on Twitter for their favorite code demo — be it CodePen, CodeSandbox, or Glitch —, and people replied. Great inspiration is guaranteed in this Twitter conversation.",
+      link: {
+        href: "https://twitter.com/sarah_edo/status/1178303250316980226",
+        keys: "people replied"
+      }
+    },
+    {
+      author: {
+        name: "Zach Leatherman",
+        twitter: "https://twitter.com/zachleat"
+      },
+      photo:
+        "https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/d34925a8-bafb-4f6f-beee-dd0c1fbcecb3/zach-leatherman-opt.png",
+      date: "october 2, 2019",
+      title: "Robust Font Loading Strategy",
+      content:
+        "Zach Leatherman shares valuable insights into how he developed a robust font loading strategy for CSS-Tricks.",
+      link: {
+        href: "https://www.zachleat.com/web/css-tricks-web-fonts/",
+        keys: "robust font loading strategy"
+      }
+    },
+    {
+      author: {
+        name: "Milica Mihajlija",
+        twitter: "https://twitter.com/bibydigital"
+      },
+      photo:
+        "https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/69e47bfd-dc62-4637-835c-444d7606b8a9/milica-mihajlija-100px-opt.png",
+      date: "october 1, 2019",
+      title: "Investigating Animation Performance",
+      content:
+        "Milica Mihajlija wrote a comprehensive article about how browser rendering works and how to navigate Chrome DevTools to diagnose animation performance issues.",
+      link: {
+        href:
+          "https://calibreapp.com/blog/investigate-animation-performance-with-devtools/",
+        keys: "diagnose animation performance issues"
+      }
+    },
+    {
+      author: {
+        name: "Steve Schoger",
+        twitter: "https://twitter.com/steveschoger"
+      },
+      photo:
+        "https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/b5684523-a396-43aa-a544-23139f93913a/steve-schoger-opt.png",
+      date: "september 30, 2019",
+      title: "Design Tips",
+      content:
+        "Steve Schoger shares a collection of quick UI design tips that he’s been working on with Adam Wathan. A treasure chest for designers.",
+      link: {
+        href: "https://twitter.com/i/moments/994601867987619840",
+        keys: "quick UI design tips"
+      }
+    }
+  ]
+};
