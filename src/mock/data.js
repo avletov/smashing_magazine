@@ -1,4 +1,4 @@
-import { Background } from "../app/Smashing/styles";
+import { Background } from "../app/SmashingSection/styles";
 
 export const menuData = [
   {
@@ -270,6 +270,21 @@ export const smashingMembersData2 = {
   }
 };
 
+export const smashingMembersData3 = {
+  img:
+    "https://d33wubrfki0l68.cloudfront.net/ce7741e1659c0366fda51555365194e0bfd136c0/ae578/images/smashing-cat/cat-with-trampet.svg",
+  title: {
+    text: "Smashing Newsletter",
+    href: "#"
+  },
+  text:
+    "Imagine you wrote a beautiful song and nobody discovered it. That would make any cat sad. Don't let that happen!",
+  form: {
+    placeholder: "Your (smashing) email",
+    buttonInner: "Subscribe →"
+  }
+};
+
 export const smashingData = {
   print: {
     subtitle: "COMING UP NEXT • JULY 24–26",
@@ -376,3 +391,168 @@ export const communityLinksData = {
     }
   ]
 };
+
+export const curatedPostsData = [
+  {
+    title: "New Front-End Challenges To Master",
+    list: [
+      {
+        name: "CSS Grid Layout",
+        link: "#"
+      },
+      {
+        name: "Pattern Library",
+        link: "#"
+      },
+      {
+        name: "Progressive Web Apps",
+        link: "#"
+      },
+      {
+        name: "Switching to HTTPS",
+        link: "#"
+      },
+      {
+        name: "HTTP/2 Guidelines",
+        link: "#"
+      },
+      {
+        name: "React & Vue.js",
+        link: "#"
+      },
+      {
+        name: "Redux For Designers",
+        link: "#"
+      },
+      {
+        name: "Vue Components",
+        link: "#"
+      }
+    ]
+  },
+  {
+    title: "Performance Optimization & Strategy",
+    list: [
+      {
+        name: "Quick Performance Wins",
+        link: "#"
+      },
+      {
+        name: "Building For Performance",
+        link: "#"
+      },
+      {
+        name: "Front-End Optimization",
+        link: "#"
+      },
+      {
+        name: "Back-End Optimization",
+        link: "#"
+      },
+      {
+        name: "Better Compression",
+        link: "#"
+      },
+      {
+        name: "Progressive Web Apps",
+        link: "#"
+      },
+      {
+        name: "Perceived Performance",
+        link: "#"
+      }
+    ]
+  },
+  {
+    title: "Improving Workflow & Data Protection",
+    list: [
+      {
+        name: "GDPR For Developers",
+        link: "#"
+      },
+      {
+        name: "Privacy Framework",
+        link: "#"
+      },
+      {
+        name: "Privacy Framework",
+        link: "#"
+      },
+      {
+        name: "Dealing With Irrational Clients",
+        link: "#"
+      },
+      {
+        name: "Getting Deliverables Right",
+        link: "#"
+      },
+      {
+        name: "Meeting Deadlines",
+        link: "#"
+      },
+      {
+        name: "Convincing Clients",
+        link: "#"
+      },
+      {
+        name: "Invoicing Clients",
+        link: "#"
+      }
+    ]
+  },
+  {
+    title: "Design Patterns & Checklists",
+    list: [
+      {
+        name: "Responsive Art-Direction",
+        link: "#"
+      },
+      {
+        name: "Perfect Configurator",
+        link: "#"
+      },
+      {
+        name: "Perfect Web Form",
+        link: "#"
+      },
+      {
+        name: "Perfect Accordion",
+        link: "#"
+      },
+      {
+        name: "Perfect Date Picker",
+        link: "#"
+      },
+      {
+        name: "Perfect Slider",
+        link: "#"
+      },
+      {
+        name: "Perfect Comparison Table",
+        link: "#"
+      },
+      {
+        name: "Perfect Infinite Scroll",
+        link: "#"
+      },
+      {
+        name: "Perfect Carousel",
+        link: "#"
+      },
+      {
+        name: "Privacy UX",
+        link: "#"
+      }
+    ]
+  }
+];
+
+export const footerData = [
+  { name: "Write for us", href: "#" },
+  { name: "Contact us", href: "#" },
+  { name: "About us (Impressum)", href: "#" },
+  { name: "Privacy policy", href: "#" },
+  { name: "Membership login", href: "#" },
+  { name: "Delivery times", href: "#" },
+  { name: "Advertise", href: "#" }
+];

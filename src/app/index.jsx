@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 
 import { Header } from "./Header";
+import { Main } from "./styles";
 import { LatestArticles } from "./LatestArticles";
 import { LatestPosts } from "./LatestPosts";
-import { Smashing } from "./Smashing";
+import { SmashingSection } from "./SmashingSection";
 import { CommunityLinks } from "./CommunityLinks";
+import { CuratedPosts } from "./CuratedPosts";
+import { Footer } from "./Footer";
 
 import { smashingData } from "../mock/data";
 
@@ -13,11 +16,15 @@ export default class App extends Component {
     return (
       <React.Fragment>
         <Header />
-        <LatestArticles />
-        <LatestPosts />
-        <Smashing isPrint={true} data={smashingData.print} />
-        <CommunityLinks />
-        <Smashing isPrint={false} data={smashingData.feature} />
+        <Main>
+          <LatestArticles />
+          <LatestPosts />
+          <SmashingSection isPrint={true} data={smashingData.print} />
+          <CommunityLinks />
+          <SmashingSection isPrint={false} data={smashingData.feature} />
+          <CuratedPosts />
+        </Main>
+        <Footer />
       </React.Fragment>
     );
   }

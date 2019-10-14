@@ -10,7 +10,7 @@ import {
   ImgWrapper
 } from "./styles";
 
-export class Smashing extends Component {
+export class SmashingSection extends Component {
   render() {
     const { subtitle, title, text, button, background } = this.props.data;
     const { isPrint } = this.props;

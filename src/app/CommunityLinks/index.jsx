@@ -19,26 +19,34 @@ import { LoadMoreCont, LoadMore, VerticalHeader } from "../LatestPosts/styles";
 import { communityLinksData } from "../../mock/data";
 
 export class CommunityLinks extends Component {
-  render() {
-    const { personOfTheWeek, other } = communityLinksData;
+  renderDesc = () => {
+    const { personOfTheWeek } = communityLinksData;
     const { name, photo, twitter, twitterName, describe } = personOfTheWeek;
 
     return (
+      <Desc>
+        <LeftBlock>
+          <PhotoWrapper>
+            <Photo src={photo}></Photo>
+          </PhotoWrapper>
+        </LeftBlock>
+        <RightBlock>
+          <Title>PERSON OF THE WEEK</Title>
+          <Content>
+            {name} (<TwitterLink href={twitter}>{twitterName}</TwitterLink>){" "}
+            {describe}
+          </Content>
+        </RightBlock>
+      </Desc>
+    );
+  };
+
+  render() {
+    const { other } = communityLinksData;
+
+    return (
       <Container>
-        <Desc>
-          <LeftBlock>
-            <PhotoWrapper>
-              <Photo src={photo}></Photo>
-            </PhotoWrapper>
-          </LeftBlock>
-          <RightBlock>
-            <Title>PERSON OF THE WEEK</Title>
-            <Content>
-              {name} (<TwitterLink href={twitter}>{twitterName}</TwitterLink>){" "}
-              {describe}
-            </Content>
-          </RightBlock>
-        </Desc>
+        {this.renderDesc()}
         <Links data={other}></Links>
         <LoadMoreCont>
           <LoadMore href="#">MORE LINKS ON TWITTER →</LoadMore>

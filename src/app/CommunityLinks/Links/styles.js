@@ -10,7 +10,7 @@ export const Container = styled.div`
   }
 `;
 
-export const Post = styled.div`
+export const Post = styled.article`
   display: flex;
   width: 50%;
   padding: 50px 50px 50px 0px;
@@ -20,7 +20,8 @@ export const Post = styled.div`
     width: 100%;
   }
 
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 600px) {
+    padding: 25px 10px 25px 0px;
     flex-direction: column;
   }
 `;
@@ -30,10 +31,19 @@ export const LeftBlock = styled.div`
 
   @media only screen and (max-width: 500px) {
     display: flex;
+    padding-left: 20px;
   }
 `;
 
-export const PhotoWrapper = styled.a``;
+export const PhotoWrapper = styled.a`
+  @media only screen and (max-width: 600px) {
+    margin-left: 20px;
+  }
+
+  @media only screen and (max-width: 500px) {
+    margin-left: 0px;
+  }
+`;
 
 export const Photo = styled.img`
   width: 65px;
@@ -78,6 +88,10 @@ export const AuthorLink = styled.a`
 export const Title = styled.h3`
   font-family: Mija;
   font-size: 30px;
+
+  @media only screen and (max-width: 600px) {
+    margin: 0px;
+  }
 `;
 
 export const Content = styled.p`

@@ -7,6 +7,10 @@ export const Container = styled.section`
   flex-wrap: wrap;
   background-color: rgb(246, 243, 242);
   box-sizing: border-box;
+
+  @media only screen and (max-width: 600px) {
+    padding: 15px;
+  }
 `;
 
 export const PostWrapper = styled.div`
@@ -156,8 +160,8 @@ export const VerticalHeader = styled.h4`
         return "125px";
       case "community":
         return "150px";
-      default:
-        return "0px";
+      case "curated":
+        return "150px";
     }
   }};
   left: ${({ type }) => {
@@ -166,8 +170,8 @@ export const VerticalHeader = styled.h4`
         return "-30px";
       case "community":
         return "-50px";
-      default:
-        return "0px";
+      case "curated":
+        return "-40px";
     }
   }};
   margin: 0px;
@@ -175,6 +179,12 @@ export const VerticalHeader = styled.h4`
   font-family: "Elena";
   font-weight: bold;
   font-size: 15px;
+
+  @media only screen and (max-width: 600px) {
+    top: 20px;
+    left: 50%;
+    transform: rotate(0deg);
+  }
 
   &::before {
     position: absolute;

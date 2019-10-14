@@ -1,13 +1,16 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
   width: 100%;
   padding: 75px 50px;
   box-sizing: border-box;
 
   @media only screen and (max-width: 500px) {
-    padding: 50px 30px;
+    padding: 70px 20px 50px;
   }
 `;
 
@@ -18,9 +21,17 @@ export const LeftBlock = styled.div`
 export const RightBlock = styled.div`
   width: 100%;
   margin: 10px;
+
+  @media only screen and (max-width: 500px) {
+    margin: 10px 0px;
+  }
 `;
 
-export const PhotoWrapper = styled.a``;
+export const PhotoWrapper = styled.a`
+  @media only screen and (max-width: 600px) {
+    margin-left: 15px;
+  }
+`;
 
 export const Photo = styled.img`
   border: 7px solid #d33a2c;
@@ -36,6 +47,7 @@ export const Photo = styled.img`
 
 export const Desc = styled.div`
   display: flex;
+  width: 100%;
 
   @media only screen and (max-width: 1000px) {
     flex-direction: column;

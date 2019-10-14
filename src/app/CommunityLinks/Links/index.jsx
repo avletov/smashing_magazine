@@ -22,7 +22,7 @@ export class Links extends Component {
       <Container>
         {data.map(({ author, photo, date, title, content, link }) => {
           return (
-            <Post>
+            <Post key={title}>
               <LeftBlock>
                 <PhotoWrapper href="#">
                   <Photo src={photo}></Photo>

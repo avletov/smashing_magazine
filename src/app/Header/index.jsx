@@ -29,7 +29,11 @@ export class Header extends Component {
           isShowSearch={isShowSearch}
         ></Menu>
         <Search isShowSearch={isShowSearch}></Search>
-        <Topics topicsData={topicsData} isShowTopics={isShowSearch}></Topics>
+        <Topics
+          location={"header"}
+          topicsData={topicsData}
+          isShowTopics={isShowSearch}
+        ></Topics>
       </Container>
     );
   }

@@ -18,6 +18,21 @@ import {
 import { latestArticlesData } from "../../../mock/data";
 
 export class Links extends Component {
+  renderHashtags = (hashtags, isRedVersion) => {
+    return hashtags.map(hashtag => {
+      const { name, id, link } = hashtag;
+
+      return (
+        <Hashtag key={id}>
+          <HashtagLink isRedVersion={isRedVersion} href={link}>
+            {name}
+            <HashtagId>{id}</HashtagId>
+          </HashtagLink>
+        </Hashtag>
+      );
+    });
+  };
+
   render() {
     const { isRedVersion } = this.props;
 
@@ -47,18 +62,7 @@ export class Links extends Component {
           <Content isRedVersion={isRedVersion}>{content}</Content>
           <Comments isRedVersion={isRedVersion}>{number} Comments</Comments>
           <HashtagsList>
-            {hashtags.map(hashtag => {
-              const { name, id, link } = hashtag;
-
-              return (
-                <Hashtag key={id}>
-                  <HashtagLink isRedVersion={isRedVersion} href={link}>
-                    {name}
-                    <HashtagId>{id}</HashtagId>
-                  </HashtagLink>
-                </Hashtag>
-              );
-            })}
+            {this.renderHashtags(hashtags, isRedVersion)}
           </HashtagsList>
         </ArticleLink>
       );

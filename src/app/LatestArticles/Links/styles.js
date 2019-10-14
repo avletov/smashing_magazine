@@ -59,6 +59,10 @@ export const PhotoWrapper = styled.div`
   margin: 30px;
   transition: background 0.3s ease-in-out;
 
+  @media only screen and (max-width: 600px) {
+    margin-left: 15px;
+  }
+
   &::before {
     content: "";
     position: absolute;

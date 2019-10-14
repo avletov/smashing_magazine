@@ -17,6 +17,12 @@ export const Container = styled.section`
     padding: ${({ isPrint }) => (isPrint ? null : "30px 50px 10px")};
     align-items: center;
   }
+
+  @media only screen and (max-width: 600px) {
+    padding-left: 25px;
+    padding-right: 25px;
+    align-items: center;
+  }
 `;
 
 export const SubTitle = styled.h3`
@@ -51,6 +57,11 @@ export const Title = styled.h2`
     text-align: ${({ isPrint }) => (isPrint ? null : "left")};
     width: ${({ isPrint }) => (isPrint ? null : "100%")};
   }
+
+  @media only screen and (max-width: 600px) {
+    margin: ${({ isPrint }) => (isPrint ? "30px 0px" : null)};
+    font-size: 30px;
+  }
 `;
 
 export const Text = styled.p`
@@ -84,9 +95,22 @@ export const Button = styled.a`
   color: #267dcc;
   background-color: white;
   align-self: ${({ isPrint }) => (isPrint ? null : "flex-start")};
+  transition: color 0.3s ease-in-out;
 
   @media only screen and (max-width: 800px) {
     font-size: 20px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 16px;
+  }
+
+  @media only screen and (max-width: 350px) {
+    font-size: 15px;
+  }
+
+  &:hover {
+    color: #d33a2c;
   }
 `;
 

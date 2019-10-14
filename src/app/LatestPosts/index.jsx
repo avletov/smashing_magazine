@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import { Supporters } from "./Supporters";
-import { SmashingMembers } from "./SmashingMembers";
+import { SmashingBlock } from "../SmashingBlock";
 
 import {
   Container,
@@ -15,8 +15,7 @@ import {
   InsertBlock,
   LoadMoreCont,
   LoadMore,
-  VerticalHeader,
-  VerticalHeaderText
+  VerticalHeader
 } from "./styles";
 
 import {
@@ -26,36 +25,46 @@ import {
 } from "../../mock/data";
 
 export class LatestPosts extends Component {
-  render() {
+  renderLatestPosts = () => {
     const orderLayoutForPosts = [1, 2, 3, 5, 6, 7, 8];
 
+    return latestPostData.map(
+      ({ daysAgo, title, author, content, link }, i) => {
+        const { name, linkToAuthor } = author;
+
+        return (
+          <PostWrapper key={title} order={orderLayoutForPosts[i]}>
+            <Post href={link}>
+              <Ago>{daysAgo} DAYS AGO</Ago>
+              <Title>{title}</Title>
+              <Author>
+                By<AuthorLink href={linkToAuthor}>{name}</AuthorLink>
+              </Author>
+              <Content>{content}</Content>
+            </Post>
+          </PostWrapper>
+        );
+      }
+    );
+  };
+
+  render() {
     return (
       <Container>
-        {latestPostData.map(({ daysAgo, title, author, content, link }, i) => {
-          const { name, linkToAuthor } = author;
-
-          return (
-            <PostWrapper order={orderLayoutForPosts[i]}>
-              <Post href={link}>
-                <Ago>{daysAgo} DAYS AGO</Ago>
-                <Title>{title}</Title>
-                <Author>
-                  By<AuthorLink href={linkToAuthor}>{name}</AuthorLink>
-                </Author>
-                <Content>{content}</Content>
-              </Post>
-            </PostWrapper>
-          );
-        })}
+        {this.renderLatestPosts()}
         <InsertBlock order={4}>
           <Supporters></Supporters>
-          <SmashingMembers data={smashingMembersData1}></SmashingMembers>
+          <SmashingBlock
+            type={"members"}
+            data={smashingMembersData1}
+          ></SmashingBlock>
         </InsertBlock>
-        <SmashingMembers
+        <SmashingBlock
+          type={"tv"}
           isSecond={true}
           order={9}
           data={smashingMembersData2}
-        ></SmashingMembers>
+        ></SmashingBlock>
         <LoadMoreCont>
           <LoadMore href="#">SEE ALL LATEST ARTICLES →</LoadMore>
         </LoadMoreCont>
