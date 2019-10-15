@@ -241,8 +241,7 @@ export const latestPostData = [
 ];
 
 export const smashingMembersData1 = {
-  img:
-    "https://d33wubrfki0l68.cloudfront.net/aea2faf51cc69a1e10bb434aa92f7c3821f16787/e4922/images/smashing-cat/singing-barista.svg",
+  img: "./img/singing-barista.svg",
   title: {
     text: "1, 620 smashing members",
     href: "#"
@@ -256,8 +255,7 @@ export const smashingMembersData1 = {
 };
 
 export const smashingMembersData2 = {
-  img:
-    "https://d33wubrfki0l68.cloudfront.net/72280e1450d4ecfc45ef96ea00b27b4bf4ef5d06/eb759/images/smashing-cat/cat-smashing-tv-2.svg",
+  img: "./img/cat-smashing-tv-2.svg",
   title: {
     text: "New on Smashing TV",
     href: "#"
@@ -271,8 +269,7 @@ export const smashingMembersData2 = {
 };
 
 export const smashingMembersData3 = {
-  img:
-    "https://d33wubrfki0l68.cloudfront.net/ce7741e1659c0366fda51555365194e0bfd136c0/ae578/images/smashing-cat/cat-with-trampet.svg",
+  img: "./img/cat-with-trampet.svg",
   title: {
     text: "Smashing Newsletter",
     href: "#"
@@ -295,8 +292,7 @@ export const smashingData = {
       inner: "Download a free PDF preview →",
       href: "#"
     },
-    background:
-      "https://d33wubrfki0l68.cloudfront.net/148069bc1849f0c7b2304c945073dbdfdb6341f0/b12bb/images/printed-mag/printmag-homepage-opt.svg"
+    background: "./img/printmag-homepage-opt.svg"
   },
 
   feature: {
@@ -308,16 +304,14 @@ export const smashingData = {
       inner: "Table of Contents ↬",
       href: "#"
     },
-    background:
-      "https://res.cloudinary.com/indysigner/image/upload/v1542959380/shop/design-systems-hardcover-book.png"
+    background: "./img/design-systems-hardcover-book.png"
   }
 };
 
 export const communityLinksData = {
   personOfTheWeek: {
     name: "Marcos Cáceres",
-    photo:
-      "https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/2a10db12-9017-48f9-b8c5-20f4b8e67627/marcos-caceres-opt.png",
+    photo: "./img/marcos-caceres-opt.png",
     twitter: "https://twitter.com/marcosc",
     twitterName: "@marcosc",
     describe:
@@ -329,8 +323,7 @@ export const communityLinksData = {
         name: "Sarah Drasner",
         twitter: "https://twitter.com/sarah_edo"
       },
-      photo:
-        "https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/24f3a562-ce19-4bac-9585-5275dbcf26f5/sarah-drasner-opt.png",
+      photo: "./img/sarah-drasner-opt.png",
       date: "OCTOBER 4, 2019",
       title: "Inspiring Code Demos",
       content:
@@ -345,8 +338,7 @@ export const communityLinksData = {
         name: "Zach Leatherman",
         twitter: "https://twitter.com/zachleat"
       },
-      photo:
-        "https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/d34925a8-bafb-4f6f-beee-dd0c1fbcecb3/zach-leatherman-opt.png",
+      photo: "./img/zach-leatherman-opt.png",
       date: "october 2, 2019",
       title: "Robust Font Loading Strategy",
       content:
@@ -361,8 +353,7 @@ export const communityLinksData = {
         name: "Milica Mihajlija",
         twitter: "https://twitter.com/bibydigital"
       },
-      photo:
-        "https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/69e47bfd-dc62-4637-835c-444d7606b8a9/milica-mihajlija-100px-opt.png",
+      photo: "./img/milica-mihajlija-100px-opt.png",
       date: "october 1, 2019",
       title: "Investigating Animation Performance",
       content:
@@ -378,8 +369,7 @@ export const communityLinksData = {
         name: "Steve Schoger",
         twitter: "https://twitter.com/steveschoger"
       },
-      photo:
-        "https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/b5684523-a396-43aa-a544-23139f93913a/steve-schoger-opt.png",
+      photo: "./img/steve-schoger-opt.png",
       date: "september 30, 2019",
       title: "Design Tips",
       content:
