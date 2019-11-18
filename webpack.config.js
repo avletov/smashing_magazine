@@ -40,8 +40,6 @@ module.exports = {
   ],
   devServer: {
     contentBase: "./dist",
-    hot: true,
-    host: "192.168.1.104",
-    port: 8080
+    hot: true
   }
 };
